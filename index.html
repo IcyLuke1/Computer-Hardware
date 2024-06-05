@@ -3,88 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Computer Hardware</title>
+    <title>Computer Hardware Explained</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Understanding Computer Hardware</h1>
-            <nav>
-                <ul>
-                    <li><a href="#hardware">What is Computer Hardware?</a></li>
-                    <li><a href="#inside-computer">Inside a Computer</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Computer Hardware Explained</h1>
+        <p>Understanding the Components of Your Computer</p>
     </header>
-
-    <div class="container">
-        <section id="hardware" class="main-content">
-            <h2>What is Computer Hardware?</h2>
-            <p>Computer hardware refers to the physical components of a computer system. These are the tangible parts that you can touch and see. The major hardware components include:</p>
-            <ul>
-                <li>Central Processing Unit (CPU)</li>
-                <li>Motherboard</li>
-                <li>Memory (RAM)</li>
-                <li>Storage Devices (HDD, SSD)</li>
-                <li>Power Supply Unit (PSU)</li>
-                <li>Input Devices (Keyboard, Mouse)</li>
-                <li>Output Devices (Monitor, Printer)</li>
-                <li>Peripheral Devices (External Storage, Networking Components)</li>
-            </ul>
-            <button class="toggle-content">Toggle Details</button>
-            <div class="content hidden">
-                <h3>Central Processing Unit (CPU)</h3>
-                <p>The CPU is often referred to as the "brain" of the computer. It performs calculations and executes instructions to run programs.</p>
-                <h3>Motherboard</h3>
-                <p>The motherboard is the main circuit board that houses the CPU, memory, and other essential components. It provides the connections and sockets for other hardware components.</p>
-                <h3>Memory (RAM)</h3>
-                <p>Random Access Memory (RAM) is the temporary storage that the CPU uses for processing tasks. It is volatile memory, meaning it loses its data when the computer is turned off.</p>
-                <h3>Storage Devices</h3>
-                <p>Hard Disk Drive (HDD): Uses spinning disks to read/write data.<br>
-                Solid State Drive (SSD): Uses flash memory for faster data access.</p>
-                <h3>Power Supply Unit (PSU)</h3>
-                <p>Converts electrical power from an outlet into a usable form for the computer. Powers all the internal components.</p>
-                <h3>Input Devices</h3>
-                <p>Devices used to input data into the computer (e.g., keyboard, mouse).</p>
-                <h3>Output Devices</h3>
-                <p>Devices used to output data from the computer (e.g., monitor, printer).</p>
-                <h3>Peripheral Devices</h3>
-                <p>Additional devices that provide extra functionality (e.g., external hard drives, network cards).</p>
-            </div>
+    <nav>
+        <ul>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#diagram">PC Diagram</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="components">
+            <h2>Computer Hardware Components</h2>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>CPU (Central Processing Unit)</td>
+                    <td>The brain of the computer, responsible for processing instructions.</td>
+                </tr>
+                <tr>
+                    <td>Motherboard</td>
+                    <td>The main circuit board that connects all components together.</td>
+                </tr>
+                <tr>
+                    <td>RAM (Random Access Memory)</td>
+                    <td>Temporary memory that the CPU uses to store data for quick access.</td>
+                </tr>
+                <tr>
+                    <td>GPU (Graphics Processing Unit)</td>
+                    <td>Handles rendering of images, video, and animations.</td>
+                </tr>
+                <tr>
+                    <td>Storage (HDD/SSD)</td>
+                    <td>Stores all your data, files, and the operating system.</td>
+                </tr>
+                <tr>
+                    <td>Power Supply Unit (PSU)</td>
+                    <td>Provides power to all components of the computer.</td>
+                </tr>
+                <tr>
+                    <td>Cooling System</td>
+                    <td>Keeps the components cool to prevent overheating.</td>
+                </tr>
+            </table>
         </section>
-
-        <section id="inside-computer" class="main-content">
-            <h2>Computer Basics: Inside a Computer</h2>
-            <p>Understanding the internal components of a computer is crucial for comprehending how it works. Here’s a look inside a typical computer case:</p>
-            <ul>
-                <li>Motherboard</li>
-                <li>CPU</li>
-                <li>RAM</li>
-                <li>Storage</li>
-                <li>Power Supply</li>
-                <li>Expansion Cards</li>
-            </ul>
-            <button class="toggle-content">Toggle Details</button>
-            <div class="content hidden">
-                <h3>Motherboard</h3>
-                <p>The central hub where all other components connect. Contains slots for the CPU, RAM, and expansion cards.</p>
-                <h3>CPU</h3>
-                <p>Installed on the motherboard. Covered with a heat sink and fan to prevent overheating.</p>
-                <h3>RAM</h3>
-                <p>Installed in the RAM slots on the motherboard. Determines the system's ability to handle multiple tasks simultaneously.</p>
-                <h3>Storage</h3>
-                <p>Hard Disk Drives (HDDs): Larger capacity, slower access speeds.<br>
-                Solid State Drives (SSDs): Smaller capacity, faster access speeds.</p>
-                <h3>Power Supply</h3>
-                <p>Supplies power to all components. Typically located at the top or bottom of the case.</p>
-                <h3>Expansion Cards</h3>
-                <p>Installed in PCI slots on the motherboard. Include graphics cards, sound cards, network cards, etc.</p>
-            </div>
+        <section id="diagram">
+            <h2>Interactive PC Diagram</h2>
+            <img src="pc-diagram.png" alt="PC Diagram" usemap="#pcmap">
+            <map name="pcmap">
+                <area shape="rect" coords="90,60,190,160" alt="CPU" onclick="showModal('CPU', 'The brain of the computer, responsible for processing instructions.', 'The CPU executes instructions from programs and applications, making it crucial for overall performance.')">
+                <area shape="rect" coords="50,200,250,300" alt="Motherboard" onclick="showModal('Motherboard', 'The main circuit board that connects all components together.', 'The motherboard connects all components and peripherals, serving as the backbone of the computer.')">
+                <area shape="rect" coords="300,50,450,150" alt="RAM" onclick="showModal('RAM', 'Temporary memory that the CPU uses to store data for quick access.', 'RAM temporarily stores data that the CPU frequently accesses, affecting multitasking and speed.')">
+                <area shape="rect" coords="470,80,600,180" alt="GPU" onclick="showModal('GPU', 'Handles rendering of images, video, and animations.', 'The GPU handles complex graphics and visual calculations, essential for gaming and video editing.')">
+                <area shape="rect" coords="60,320,200,400" alt="Storage" onclick="showModal('Storage', 'Stores all your data, files, and the operating system.', 'Storage devices hold your operating system, applications, and personal files. SSDs are faster than HDDs.')">
+                <area shape="rect" coords="650,60,780,160" alt="PSU" onclick="showModal('PSU', 'Provides power to all components of the computer.', 'The PSU converts electrical power from an outlet into usable power for the computer\'s components.')">
+                <area shape="rect" coords="700,200,850,300" alt="Cooling System" onclick="showModal('Cooling System', 'Keeps the components cool to prevent overheating.', 'Cooling systems prevent overheating, which can damage components and reduce performance.')">
+            </map>
         </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>This website aims to educate users on the different components that make up a computer. Understanding these components can help you make informed decisions when building or upgrading your computer.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@computerhardware.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Computer Hardware Explained</p>
+    </footer>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title"></h2>
+            <p class="modal-body"></p>
+        </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

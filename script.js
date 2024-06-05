@@ -1,10 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButtons = document.querySelectorAll('.toggle-content');
+document.addEventListener("DOMContentLoaded", () => {
+    const showModal = (component, description, additionalInfo) => {
+        const modal = document.getElementById("modal");
+        const modalTitle = modal.querySelector(".modal-title");
+        const modalBody = modal.querySelector(".modal-body");
 
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            content.classList.toggle('hidden');
-        });
+        modalTitle.innerText = component;
+        modalBody.innerHTML = `<p>${description}</p><p><strong>More Info:</strong> ${additionalInfo}</p>`;
+
+        modal.style.display = "block";
+    };
+
+    const closeModal = () => {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    };
+
+    document.querySelector(".modal-close").addEventListener("click", closeModal);
+    window.addEventListener("click", (event) => {
+        const modal = document.getElementById("modal");
+        if (event.target == modal) {
+            closeModal();
+        }
     });
 });
