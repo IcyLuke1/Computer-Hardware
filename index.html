@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Hardware Explained</title>
-    <link rel="stylesheet" href="https://icyluke1.github.io/Computer-Hardware/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -26,49 +26,59 @@
                 <tr>
                     <th>Component</th>
                     <th>Description</th>
+                    <th>More Info</th>
                 </tr>
                 <tr>
                     <td>CPU (Central Processing Unit)</td>
                     <td>The brain of the computer, responsible for processing instructions.</td>
+                    <td>The CPU executes instructions from programs and applications, making it crucial for overall performance. Popular manufacturers include Intel and AMD.</td>
                 </tr>
                 <tr>
                     <td>Motherboard</td>
                     <td>The main circuit board that connects all components together.</td>
+                    <td>The motherboard connects all components and peripherals, serving as the backbone of the computer. It includes sockets for CPU, RAM, and expansion cards.</td>
                 </tr>
                 <tr>
                     <td>RAM (Random Access Memory)</td>
                     <td>Temporary memory that the CPU uses to store data for quick access.</td>
+                    <td>RAM temporarily stores data that the CPU frequently accesses, affecting multitasking and speed. Common types include DDR4 and DDR5.</td>
                 </tr>
                 <tr>
                     <td>GPU (Graphics Processing Unit)</td>
                     <td>Handles rendering of images, video, and animations.</td>
+                    <td>The GPU handles complex graphics and visual calculations, essential for gaming and video editing. NVIDIA and AMD are leading GPU manufacturers.</td>
                 </tr>
                 <tr>
                     <td>Storage (HDD/SSD)</td>
                     <td>Stores all your data, files, and the operating system.</td>
+                    <td>Storage devices hold your operating system, applications, and personal files. SSDs are faster than HDDs and offer quicker boot times and data access.</td>
                 </tr>
                 <tr>
                     <td>Power Supply Unit (PSU)</td>
                     <td>Provides power to all components of the computer.</td>
+                    <td>The PSU converts electrical power from an outlet into usable power for the computer's components. It's crucial to have a reliable PSU to ensure system stability.</td>
                 </tr>
                 <tr>
                     <td>Cooling System</td>
                     <td>Keeps the components cool to prevent overheating.</td>
+                    <td>Cooling systems prevent overheating, which can damage components and reduce performance. They include air coolers and liquid cooling solutions.</td>
                 </tr>
             </table>
         </section>
         <section id="diagram">
             <h2>Interactive PC Diagram</h2>
-            <img src="pc-diagram.png" alt="PC Diagram" usemap="#pcmap">
-            <map name="pcmap">
-                <area shape="rect" coords="90,60,190,160" alt="CPU" onclick="showModal('CPU', 'The brain of the computer, responsible for processing instructions.', 'The CPU executes instructions from programs and applications, making it crucial for overall performance.')">
-                <area shape="rect" coords="50,200,250,300" alt="Motherboard" onclick="showModal('Motherboard', 'The main circuit board that connects all components together.', 'The motherboard connects all components and peripherals, serving as the backbone of the computer.')">
-                <area shape="rect" coords="300,50,450,150" alt="RAM" onclick="showModal('RAM', 'Temporary memory that the CPU uses to store data for quick access.', 'RAM temporarily stores data that the CPU frequently accesses, affecting multitasking and speed.')">
-                <area shape="rect" coords="470,80,600,180" alt="GPU" onclick="showModal('GPU', 'Handles rendering of images, video, and animations.', 'The GPU handles complex graphics and visual calculations, essential for gaming and video editing.')">
-                <area shape="rect" coords="60,320,200,400" alt="Storage" onclick="showModal('Storage', 'Stores all your data, files, and the operating system.', 'Storage devices hold your operating system, applications, and personal files. SSDs are faster than HDDs.')">
-                <area shape="rect" coords="650,60,780,160" alt="PSU" onclick="showModal('PSU', 'Provides power to all components of the computer.', 'The PSU converts electrical power from an outlet into usable power for the computer\'s components.')">
-                <area shape="rect" coords="700,200,850,300" alt="Cooling System" onclick="showModal('Cooling System', 'Keeps the components cool to prevent overheating.', 'Cooling systems prevent overheating, which can damage components and reduce performance.')">
-            </map>
+            <div class="diagram-container">
+                <img src="pc-diagram.png" alt="PC Diagram" usemap="#pcmap">
+                <map name="pcmap">
+                    <area shape="rect" coords="90,60,190,160" alt="CPU" onclick="showModal('CPU', 'The brain of the computer, responsible for processing instructions.', 'The CPU executes instructions from programs and applications, making it crucial for overall performance. Popular manufacturers include Intel and AMD.')">
+                    <area shape="rect" coords="50,200,250,300" alt="Motherboard" onclick="showModal('Motherboard', 'The main circuit board that connects all components together.', 'The motherboard connects all components and peripherals, serving as the backbone of the computer. It includes sockets for CPU, RAM, and expansion cards.')">
+                    <area shape="rect" coords="300,50,450,150" alt="RAM" onclick="showModal('RAM', 'Temporary memory that the CPU uses to store data for quick access.', 'RAM temporarily stores data that the CPU frequently accesses, affecting multitasking and speed. Common types include DDR4 and DDR5.')">
+                    <area shape="rect" coords="470,80,600,180" alt="GPU" onclick="showModal('GPU', 'Handles rendering of images, video, and animations.', 'The GPU handles complex graphics and visual calculations, essential for gaming and video editing. NVIDIA and AMD are leading GPU manufacturers.')">
+                    <area shape="rect" coords="60,320,200,400" alt="Storage" onclick="showModal('Storage', 'Stores all your data, files, and the operating system.', 'Storage devices hold your operating system, applications, and personal files. SSDs are faster than HDDs and offer quicker boot times and data access.')">
+                    <area shape="rect" coords="650,60,780,160" alt="PSU" onclick="showModal('PSU', 'Provides power to all components of the computer.', 'The PSU converts electrical power from an outlet into usable power for the computer\'s components. It\'s crucial to have a reliable PSU to ensure system stability.')">
+                    <area shape="rect" coords="700,200,850,300" alt="Cooling System" onclick="showModal('Cooling System', 'Keeps the components cool to prevent overheating.', 'Cooling systems prevent overheating, which can damage components and reduce performance. They include air coolers and liquid cooling solutions.')">
+                </map>
+            </div>
         </section>
         <section id="about">
             <h2>About</h2>
