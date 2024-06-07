@@ -1,25 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const showModal = (component, description, additionalInfo) => {
-        const modal = document.getElementById("modal");
-        const modalTitle = modal.querySelector(".modal-title");
-        const modalBody = modal.querySelector(".modal-body");
+// script.js
 
-        modalTitle.innerText = component;
-        modalBody.innerHTML = `<p>${description}</p><p><strong>More Info:</strong> ${additionalInfo}</p>`;
+document.addEventListener("DOMContentLoaded", function() {
+    // Modal functionality
+    const modal = document.getElementById("modal");
+    const modalClose = document.querySelector(".modal-close");
+    const modalTitle = document.querySelector(".modal-title");
+    const modalBody = document.querySelector(".modal-body");
 
+    function showModal(title, body) {
+        modalTitle.textContent = title;
+        modalBody.textContent = body;
         modal.style.display = "block";
-    };
+    }
 
-    const closeModal = () => {
-        const modal = document.getElementById("modal");
+    modalClose.addEventListener("click", function() {
         modal.style.display = "none";
-    };
+    });
 
-    document.querySelector(".modal-close").addEventListener("click", closeModal);
-    window.addEventListener("click", (event) => {
-        const modal = document.getElementById("modal");
+    window.addEventListener("click", function(event) {
         if (event.target == modal) {
-            closeModal();
+            modal.style.display = "none";
         }
     });
+
+    // Attach showModal function to global scope
+    window.showModal = showModal;
+
+    // Filter functionality
+    window.filterComponent = function(component) {
+        const rows = document.querySelectorAll("table tr");
+        rows.forEach(row => {
+            if (component === 'all') {
+                row.style.display = "";
+            } else if (row.id === component) {
+                row.style.display = "";
+            } else if (row.querySelector("th")) {
+                row.style.display = ""; // Keep the header row visible
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
 });
